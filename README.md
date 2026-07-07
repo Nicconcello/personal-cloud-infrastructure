@@ -28,6 +28,7 @@ Remote access is structured on a *Zero-Trust* model that leverages a point-to-po
 
 ## Logical Architecture and Data Flow
 
+```text
 [Smartphone Client (Nextcloud App)]
                 │
           (Tailscale IPv4)
@@ -48,7 +49,7 @@ Remote access is structured on a *Zero-Trust* model that leverages a point-to-po
 │   │                                  └───────────┘ │
 │   └────────────────────────────────────────────┘   │
 └────────────────────────────────────────────────────┘
-
+```
 
 ## Automation & Systemic Resilience
 To ensure headless operation (without input/output peripherals connected) and tolerance to power interruptions, the host has been configured wi th the following policies:
@@ -65,7 +66,10 @@ To ensure headless operation (without input/output peripherals connected) and to
 ## Quick Maintenance Commands
 
 Configuration of the trusted origin domain to enable the mobile app handshake:
+```text
 docker compose exec -u www-data app php occ config:system:set trusted_domains 2 --value=100.x.x.x:8080
-
+```
 Clean stop of the stack:
+```text
 docker compose down
+```
