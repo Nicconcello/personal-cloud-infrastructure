@@ -28,7 +28,6 @@ Remote access is structured on a *Zero-Trust* model that leverages a point-to-po
 
 ## Logical Architecture and Data Flow
 
-```text
 [Smartphone Client (Nextcloud App)]
                 │
           (Tailscale IPv4)
